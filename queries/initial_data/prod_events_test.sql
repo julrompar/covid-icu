@@ -1,0 +1,1 @@
+SELECT COUNT(*) as count_data FROM procedure_events_data WHERE subject_id = 30000238;
