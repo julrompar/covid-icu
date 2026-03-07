@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import shap
 
 # 1. Carga de datos
-df = pd.read_csv('/Users/julianromero/Desktop/covid-icu/data/processed/covid_icu_dataset.csv/part-00000-93da85da-fc49-4447-b271-f9767ad4f112-c000.csv') # Cambia al nombre de tu archivo actualizado
+df = pd.read_parquet('../datasets/v1/dataset_v1.parquet')
 
 # 2. Variable Objetivo
 df['target'] = df['dod_within_30_days'].notnull().astype(int)
@@ -18,12 +18,8 @@ features = [
     'is_prone_position', 'has_chest_tube', 'is_dnr', 'has_central_line', 
     'has_hemodialysis', 'has_niv', 'is_ecmo', 'length_of_stay', 'min_bp_systolic', 
     'min_bp_diastolic', 'min_oxygen_saturation', 'max_pulse', 'max_temp', 'max_glucose',
-    'anchor_age', 'gender', 'marital_status', 'race'
+    'anchor_age', 'gender', 'marital_status', 'race', 'max_lactate'
 ]
-
-# Añade 'Lactate' solo si existe en tu dataframe actual
-if 'Lactate' in df.columns:
-    features.append('Lactate')
 
 X = df[features].copy()
 y = df['target']

@@ -1,0 +1,24 @@
+{
+  "best_auprc_cv": 0.32144613092907626,
+  "params": {
+    "n_estimators": 752,
+    "max_depth": 3,
+    "learning_rate": 0.016239148683441625,
+    "subsample": 0.8258814191367144,
+    "colsample_bytree": 0.6777787969608957,
+    "min_child_weight": 8,
+    "gamma": 2.9923940999531777,
+    "reg_alpha": 0.9694645841492775,
+    "reg_lambda": 1.1561727135742481,
+    "scale_pos_weight": 7.790686509841574,
+    "random_state": 42,
+    "eval_metric": "aucpr"
+  },
+  "optimal_threshold_f1": 0.2020603015075377,
+  "val_f1_at_threshold": 0.4028520499108734,
+  "cv_auroc_mean": 0.7658369928047002,
+  "cv_auprc_mean": 0.32144613092907626,
+  "test_auroc": 0.7627957716107712,
+  "test_auprc": 0.3121908617985862,
+  "test_brier": 0.08901644359919808
+}

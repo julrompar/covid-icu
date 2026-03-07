@@ -4,5 +4,7 @@ SELECT
     marital_status,
     race,
     admittime,
+    dischtime,
+    deathtime,
     null as hosp_outcome 
 FROM admissions

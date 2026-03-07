@@ -1,0 +1,17 @@
+,,Grouped by mortality_status,Grouped by mortality_status,Grouped by mortality_status,Grouped by mortality_status,Grouped by mortality_status
+,,Missing,Overall,Fallecidos,No fallecidos,P-Value
+n,,,28612,3255,25357,
+length_of_stay,,0,3.7 (6.1),4.9 (5.6),3.5 (6.1),<0.001
+min_bp_systolic_line,,22195,96.9 (25.6),87.0 (26.2),98.3 (25.2),<0.001
+min_bp_diastolic_line,,22190,47.6 (14.3),42.7 (14.1),48.3 (14.2),<0.001
+min_bp_systolic,,9128,105.8 (22.6),95.7 (24.4),107.1 (22.0),<0.001
+min_bp_diastolic,,9128,57.5 (12.6),52.4 (13.9),58.2 (12.3),<0.001
+min_oxygen_saturation,,8597,92.3 (8.4),88.5 (13.0),92.8 (7.4),<0.001
+max_pulse,,8548,97.9 (22.3),106.6 (25.8),96.8 (21.5),<0.001
+max_temp,,9087,98.8 (1.3),98.8 (1.7),98.8 (1.2),0.062
+max_glucose,,12348,90558.1 (946409.5),82111.7 (901624.2),91710.8 (952382.4),0.661
+max_lactate,,22758,75165.1 (863771.0),338987.1 (1810769.8),31824.4 (563265.7),<0.001
+anchor_age,,0,62.7 (16.9),69.6 (14.6),61.8 (17.0),<0.001
+gender,F,,12527 (43.8),1460 (44.9),11067 (43.6),0.095
+gender,M,,16083 (56.2),1794 (55.1),14289 (56.4),
+gender,U,,2 (0.0),1 (0.0),1 (0.0),
