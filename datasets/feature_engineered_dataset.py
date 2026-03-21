@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('./dataset_v1.csv')
+df = pd.read_csv('./v2/dataset_v2.csv')
 
 # Features actuales
 features_base = [

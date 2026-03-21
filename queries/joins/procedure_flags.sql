@@ -13,5 +13,5 @@ SELECT
     COALESCE(MAX(CASE WHEN itemid = 704890 THEN 1 ELSE 0 END), 0) as has_hemodialysis,
     COALESCE(MAX(CASE WHEN itemid = 792843 THEN 1 ELSE 0 END), 0) as has_niv,
     COALESCE(MAX(CASE WHEN itemid = 736876 THEN 1 ELSE 0 END), 0) as is_ecmo
-FROM procedure_events_adm
+FROM procedure_events_icu
 GROUP BY subject_id, admission_id, stay_id
