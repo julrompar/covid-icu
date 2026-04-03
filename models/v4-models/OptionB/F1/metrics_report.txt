@@ -1,0 +1,14 @@
+=== REPORTE V4 OptionB (F1) ===
+AUROC: 0.7756
+AUPRC: 0.5504
+Umbral Optimo (F1): 0.52
+F1-Score (Test): 0.5102 (Val: 0.4870)
+
+              precision    recall  f1-score   support
+
+           0       0.88      0.69      0.77       238
+           1       0.41      0.68      0.51        73
+
+    accuracy                           0.69       311
+   macro avg       0.64      0.69      0.64       311
+weighted avg       0.77      0.69      0.71       311

@@ -384,8 +384,61 @@ admissions_with_valid_dod = spark.sql("""
 admissions_with_valid_dod
 
 
-# In[ ]:
+# V3 Dataset Generation
 
+lab_features_v3 = spark.sql("""
+    SELECT subject_id, admission_id, stay_id,
+        MAX(CASE WHEN itemid = 100031 THEN value_num END) AS max_lactate,
+        MAX(CASE WHEN itemid = 100002 THEN value_num END) AS max_creatinine,
+        MAX(CASE WHEN itemid = 100020 THEN value_num END) AS max_bilirubin,
+        MIN(CASE WHEN itemid = 100014 THEN value_num END) AS min_platelets,
+        MAX(CASE WHEN itemid = 100004 THEN value_num END) AS max_bun,
+        MAX(CASE WHEN itemid = 100034 THEN value_num END) AS max_pt,
+        MAX(CASE WHEN itemid = 100053 THEN value_num END) AS max_crp,
+        MAX(CASE WHEN itemid = 100052 THEN value_num END) AS max_ferritin,
+        MAX(CASE WHEN itemid = 100075 THEN value_num END) AS max_dimer,
+        MIN(CASE WHEN itemid = 100037 THEN value_num END) AS min_lymphocytes,
+        MAX(CASE WHEN itemid = 100022 THEN value_num END) AS max_neutrophils,
+        MAX(CASE WHEN itemid = 100059 THEN value_num END) AS max_troponin,
+        MIN(CASE WHEN itemid = 100029 THEN value_num END) AS min_pao2
+    FROM lab_events_icu
+    GROUP BY subject_id, admission_id, stay_id
+""")
+
+chart_features_v3 = spark.sql("""
+    SELECT subject_id, admission_id, stay_id,
+        MAX(CASE WHEN itemid = 320210 THEN try_cast(value as double) END) AS max_resp_rate,
+        MAX(CASE WHEN itemid = 300001 THEN try_cast(value as double) END) AS bmi
+    FROM chart_events_icu
+    GROUP BY subject_id, admission_id, stay_id
+""")
+
+base_stays_v3 = spark.sql("""
+    SELECT i.subject_id, i.admission_id, i.stay_id, i.length_of_stay, i.admittime
+    FROM icu_stays_data i
+    INNER JOIN diagnoses_icd d ON i.subject_id = d.subject_id AND i.admission_id = d.hadm_id
+    WHERE d.icd_code = 'U071'
+""")
+
+dataset_complete_v3 = (base_stays_v3
+    .join(all_bp, on=['subject_id', 'admission_id', 'stay_id'], how='left')
+    .join(sp_o2, on=['subject_id', 'admission_id', 'stay_id'], how='left')
+    .join(pulse, on=['subject_id', 'admission_id', 'stay_id'], how='left')
+    .join(temperature, on=['subject_id', 'admission_id', 'stay_id'], how='left')
+    .join(glucose, on=['subject_id', 'admission_id', 'stay_id'], how='left')
+    .join(procedure_flags, on=['subject_id', 'admission_id', 'stay_id'], how='left')
+    .join(lab_features_v3, on=['subject_id', 'admission_id', 'stay_id'], how='left')
+    .join(chart_features_v3, on=['subject_id', 'admission_id', 'stay_id'], how='left')
+    .join(patients_data.select('subject_id', 'admission_id', 'gender', 'anchor_age', 'dod_within_30_days'), 
+          on=['subject_id', 'admission_id'], how='left')
+    .join(hosp_adm_data.select('subject_id', 'admission_id', 'marital_status', 'race'), 
+          on=['subject_id', 'admission_id'], how='left')
+)
+
+for col_name in procedure_columns:
+    dataset_complete_v3 = dataset_complete_v3.fillna({col_name: 0})
+
+dataset_complete_v3.write.mode("overwrite").parquet("../data/processed/covid_icu_dataset_v3_all_stays.parquet")
 
 
 
