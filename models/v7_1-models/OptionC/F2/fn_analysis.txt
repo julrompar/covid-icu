@@ -1,0 +1,78 @@
+======================================================================
+ANÁLISIS DE FALSOS NEGATIVOS
+======================================================================
+
+Total de muertes en test: 34
+Verdaderos Positivos (TP): 33
+Falsos Negativos (FN):     1
+Recall: 97.1% (33/34)
+
+----------------------------------------------------------------------
+Comparativa de variables entre FN y TP:
+----------------------------------------------------------------------
+
+sofa_partial                       
+  FN:     5.00 (n=1, missing=0)
+  TP:     4.15 (n=33, missing=0)
+  Δ:      0.85
+
+apache2_partial                    
+  FN:     8.00 (n=1, missing=0)
+  TP:    15.88 (n=33, missing=0)
+  Δ:     -7.88
+
+severity_score                     
+  FN:     0.37 (n=1, missing=0)
+  TP:     0.31 (n=33, missing=0)
+  Δ:      0.06
+
+vital_spo2_val_min                 
+  FN:    89.00 (n=1, missing=0)
+  TP:    83.48 (n=31, missing=2)
+  Δ:      5.52
+
+vital_spo2_val_last                
+  FN:    95.00 (n=1, missing=0)
+  TP:    94.16 (n=31, missing=2)
+  Δ:      0.84
+
+lab_creatinine_val_max             
+  FN:     1.12 (n=1, missing=0)
+  TP:     2.02 (n=33, missing=0)
+  Δ:     -0.90
+
+lab_creatinine_val_last            
+  FN:     0.84 (n=1, missing=0)
+  TP:     1.75 (n=33, missing=0)
+  Δ:     -0.91
+
+lab_lactate_val_max                
+  FN:     2.00 (n=1, missing=0)
+  TP:     2.00 (n=9, missing=24)
+  Δ:      0.00
+
+lab_lactate_val_last               
+  FN:     2.00 (n=1, missing=0)
+  TP:     1.38 (n=9, missing=24)
+  Δ:      0.62
+
+lab_platelets_val_min              
+  FN:   226.00 (n=1, missing=0)
+  TP:   210.52 (n=33, missing=0)
+  Δ:     15.48
+
+lab_bilirubin_val_max              
+  FN:     0.50 (n=1, missing=0)
+  TP:     0.66 (n=31, missing=2)
+  Δ:     -0.16
+
+lab_pao2_val_min                   
+  FN:    40.00 (n=1, missing=0)
+  TP:    64.77 (n=22, missing=11)
+  Δ:    -24.77
+
+anchor_age                         
+  FN:    50.00 (n=1, missing=0)
+  TP:    70.24 (n=33, missing=0)
+  Δ:    -20.24
+

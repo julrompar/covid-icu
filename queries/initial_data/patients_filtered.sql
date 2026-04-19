@@ -11,6 +11,6 @@ SELECT
         THEN p.dod
         ELSE NULL
     END AS dod_within_30_days
-FROM admit_date_hospital a
+FROM hosp_adm_data a
 JOIN patients p
   ON a.subject_id = p.subject_id

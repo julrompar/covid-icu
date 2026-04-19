@@ -1,0 +1,78 @@
+======================================================================
+ANÁLISIS DE FALSOS NEGATIVOS
+======================================================================
+
+Total de muertes en test: 34
+Verdaderos Positivos (TP): 15
+Falsos Negativos (FN):     19
+Recall: 44.1% (15/34)
+
+----------------------------------------------------------------------
+Comparativa de variables entre FN y TP:
+----------------------------------------------------------------------
+
+sofa_partial                       
+  FN:     2.95 (n=19, missing=0)
+  TP:     5.73 (n=15, missing=0)
+  Δ:     -2.79
+
+apache2_partial                    
+  FN:    12.53 (n=19, missing=0)
+  TP:    19.60 (n=15, missing=0)
+  Δ:     -7.07
+
+severity_score                     
+  FN:     0.27 (n=19, missing=0)
+  TP:     0.36 (n=15, missing=0)
+  Δ:     -0.09
+
+vital_spo2_val_min                 
+  FN:    87.53 (n=19, missing=0)
+  TP:    79.07 (n=15, missing=0)
+  Δ:      8.46
+
+vital_spo2_val_last                
+  FN:    94.16 (n=19, missing=0)
+  TP:    94.33 (n=15, missing=0)
+  Δ:     -0.18
+
+lab_creatinine_val_max             
+  FN:     1.14 (n=19, missing=0)
+  TP:     3.08 (n=15, missing=0)
+  Δ:     -1.93
+
+lab_creatinine_val_last            
+  FN:     0.95 (n=19, missing=0)
+  TP:     2.69 (n=15, missing=0)
+  Δ:     -1.74
+
+lab_lactate_val_max                
+  FN:     1.68 (n=19, missing=0)
+  TP:     1.77 (n=15, missing=0)
+  Δ:     -0.09
+
+lab_lactate_val_last               
+  FN:     1.43 (n=19, missing=0)
+  TP:     1.39 (n=15, missing=0)
+  Δ:      0.04
+
+lab_platelets_val_min              
+  FN:   199.26 (n=19, missing=0)
+  TP:   225.80 (n=15, missing=0)
+  Δ:    -26.54
+
+lab_bilirubin_val_max              
+  FN:     0.58 (n=19, missing=0)
+  TP:     0.74 (n=15, missing=0)
+  Δ:     -0.16
+
+lab_pao2_val_min                   
+  FN:    52.63 (n=19, missing=0)
+  TP:    67.67 (n=15, missing=0)
+  Δ:    -15.04
+
+anchor_age                         
+  FN:    67.74 (n=19, missing=0)
+  TP:    72.07 (n=15, missing=0)
+  Δ:     -4.33
+

@@ -5,7 +5,7 @@ SELECT
     c.itemid,
     c.value
 FROM icu_stays_data a
-INNER JOIN procedure_events c
+INNER JOIN procedure_events_data c
     ON a.stay_id = c.stay_id
     AND c.starttime >= a.admittime
     AND c.starttime <= date_add(a.admittime, 1)

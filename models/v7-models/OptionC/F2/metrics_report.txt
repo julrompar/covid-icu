@@ -1,0 +1,54 @@
+======================================================================
+REPORTE V7 — OptionC (F2)
+======================================================================
+
+--- CONFIGURACIÓN ---
+Dataset: /Users/julianromero/Desktop/covid-icu/datasets/v7/dataset_v7_optionC.parquet
+Ventana de extracción: 72 horas
+Trials Optuna: 100
+
+--- MÉTRICAS PRINCIPALES ---
+AUROC:  0.7858
+AUPRC:  0.5775
+Umbral Óptimo (F2): 0.400
+F2-Score (Test): 0.7143  (Val: 0.6889)
+Brier Score (raw):      0.2079
+Brier Score (calibrado): 0.1532
+
+--- INTERVALOS DE CONFIANZA BOOTSTRAP (95%) ---
+AUROC = 0.7858 (IC: 0.6904 – 0.8648)
+AUPRC = 0.5775 (IC: 0.4161 – 0.7402)
+F1    = 0.5195 (IC: 0.3666 – 0.6400)
+F2    = 0.5587 (IC: 0.3977 – 0.6831)
+(Basado en 1000 iteraciones bootstrap)
+
+--- CLASSIFICATION REPORT ---
+              precision    recall  f1-score   support
+
+    No muere       0.97      0.35      0.52        96
+       Muere       0.35      0.97      0.51        34
+
+    accuracy                           0.52       130
+   macro avg       0.66      0.66      0.52       130
+weighted avg       0.81      0.52      0.52       130
+
+--- COMPARATIVA BASELINES (AUROC) ---
+  SOFA parcial                  : 0.6503
+  APACHE II parcial             : 0.7138
+  Regresión Logística           : 0.6795
+  XGBoost v7                    : 0.7858
+
+--- HIPERPARÁMETROS ÓPTIMOS ---
+  n_estimators: 1194
+  max_depth: 7
+  learning_rate: 0.0065109733837343245
+  subsample: 0.8211175366653279
+  colsample_bytree: 0.7065362141708127
+  min_child_weight: 10
+  gamma: 4.271766075473074
+  reg_alpha: 0.00021097935948048783
+  reg_lambda: 0.04818659991463097
+  scale_pos_weight: 2.840764331210191
+  random_state: 42
+  eval_metric: aucpr
+  early_stopping_rounds: 50

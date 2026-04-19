@@ -1,0 +1,78 @@
+======================================================================
+ANÁLISIS DE FALSOS NEGATIVOS
+======================================================================
+
+Total de muertes en test: 34
+Verdaderos Positivos (TP): 20
+Falsos Negativos (FN):     14
+Recall: 58.8% (20/34)
+
+----------------------------------------------------------------------
+Comparativa de variables entre FN y TP:
+----------------------------------------------------------------------
+
+sofa_partial                       
+  FN:     2.86 (n=14, missing=0)
+  TP:     5.10 (n=20, missing=0)
+  Δ:     -2.24
+
+apache2_partial                    
+  FN:    11.64 (n=14, missing=0)
+  TP:    18.45 (n=20, missing=0)
+  Δ:     -6.81
+
+severity_score                     
+  FN:     0.28 (n=14, missing=0)
+  TP:     0.34 (n=20, missing=0)
+  Δ:     -0.06
+
+vital_spo2_val_min                 
+  FN:    88.46 (n=13, missing=1)
+  TP:    80.37 (n=19, missing=1)
+  Δ:      8.09
+
+vital_spo2_val_last                
+  FN:    94.31 (n=13, missing=1)
+  TP:    94.11 (n=19, missing=1)
+  Δ:      0.20
+
+lab_creatinine_val_max             
+  FN:     1.08 (n=14, missing=0)
+  TP:     2.63 (n=20, missing=0)
+  Δ:     -1.55
+
+lab_creatinine_val_last            
+  FN:     0.92 (n=14, missing=0)
+  TP:     2.28 (n=20, missing=0)
+  Δ:     -1.37
+
+lab_lactate_val_max                
+  FN:     1.58 (n=5, missing=9)
+  TP:     2.42 (n=5, missing=15)
+  Δ:     -0.84
+
+lab_lactate_val_last               
+  FN:     1.40 (n=5, missing=9)
+  TP:     1.48 (n=5, missing=15)
+  Δ:     -0.08
+
+lab_platelets_val_min              
+  FN:   213.36 (n=14, missing=0)
+  TP:   209.30 (n=20, missing=0)
+  Δ:      4.06
+
+lab_bilirubin_val_max              
+  FN:     0.59 (n=13, missing=1)
+  TP:     0.70 (n=19, missing=1)
+  Δ:     -0.11
+
+lab_pao2_val_min                   
+  FN:    58.12 (n=8, missing=6)
+  TP:    66.67 (n=15, missing=5)
+  Δ:     -8.54
+
+anchor_age                         
+  FN:    68.50 (n=14, missing=0)
+  TP:    70.45 (n=20, missing=0)
+  Δ:     -1.95
+
