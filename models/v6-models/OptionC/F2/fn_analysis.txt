@@ -1,0 +1,58 @@
+======================================================================
+ANÁLISIS DE FALSOS NEGATIVOS
+======================================================================
+
+Total de muertes en test: 73
+Verdaderos Positivos (TP): 57
+Falsos Negativos (FN):     16
+Recall: 78.1% (57/73)
+
+----------------------------------------------------------------------
+Comparativa de variables entre FN y TP:
+----------------------------------------------------------------------
+
+sofa_partial                  
+  FN:     2.44 (n=16, missing=0)
+  TP:     2.61 (n=57, missing=0)
+  Δ:     -0.18
+
+apache2_partial               
+  FN:     9.62 (n=16, missing=0)
+  TP:    13.72 (n=57, missing=0)
+  Δ:     -4.09
+
+severity_score                
+  FN:     0.17 (n=16, missing=0)
+  TP:     0.17 (n=57, missing=0)
+  Δ:      0.00
+
+min_oxygen_saturation         
+  FN:    93.06 (n=16, missing=0)
+  TP:    85.53 (n=57, missing=0)
+  Δ:      7.54
+
+max_creatinine                
+  FN:     1.89 (n=16, missing=0)
+  TP:     1.76 (n=57, missing=0)
+  Δ:      0.13
+
+anchor_age                    
+  FN:    58.06 (n=16, missing=0)
+  TP:    75.40 (n=57, missing=0)
+  Δ:    -17.34
+
+max_lactate                   
+  FN:     1.69 (n=16, missing=0)
+  TP: 350879.00 (n=57, missing=0)
+  Δ:  -350877.31
+
+min_platelets                 
+  FN:   222.25 (n=16, missing=0)
+  TP:   214.11 (n=57, missing=0)
+  Δ:      8.14
+
+max_bilirubin                 
+  FN:     0.48 (n=16, missing=0)
+  TP:     0.63 (n=57, missing=0)
+  Δ:     -0.15
+

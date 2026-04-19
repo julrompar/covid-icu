@@ -1,0 +1,27 @@
+======================================================================
+REPORTE V6 — OptionC (F2)
+======================================================================
+
+--- MÉTRICAS PRINCIPALES ---
+AUROC:  0.8054
+AUPRC:  0.6323
+Umbral Óptimo (F2): 0.490
+F2-Score (Test): 0.6722 (Val: 0.6786)
+Brier Score (raw): 0.1918
+Brier Score (calibrado): 0.1387
+
+--- CLASSIFICATION REPORT ---
+              precision    recall  f1-score   support
+
+    No muere       0.91      0.68      0.78       238
+       Muere       0.43      0.78      0.56        73
+
+    accuracy                           0.71       311
+   macro avg       0.67      0.73      0.67       311
+weighted avg       0.80      0.71      0.73       311
+
+--- COMPARATIVA BASELINES ---
+SOFA parcial                  : AUROC = 0.6854
+APACHE II parcial             : AUROC = 0.7696
+Regresión Logística           : AUROC = 0.8119
+XGBoost v6                    : AUROC = 0.8054

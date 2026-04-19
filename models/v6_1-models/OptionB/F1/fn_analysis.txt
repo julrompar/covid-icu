@@ -1,0 +1,73 @@
+======================================================================
+ANÁLISIS DE FALSOS NEGATIVOS
+======================================================================
+
+Total de muertes en test: 73
+Verdaderos Positivos (TP): 44
+Falsos Negativos (FN):     29
+Recall: 60.3% (44/73)
+
+----------------------------------------------------------------------
+Comparativa de variables entre FN y TP:
+----------------------------------------------------------------------
+
+sofa_partial                       
+  FN:     4.45 (n=29, missing=0)
+  TP:     5.00 (n=44, missing=0)
+  Δ:     -0.55
+
+apache2_partial                    
+  FN:    12.38 (n=29, missing=0)
+  TP:    18.39 (n=44, missing=0)
+  Δ:     -6.01
+
+vital_spo2_val_min                 
+  FN:    85.83 (n=29, missing=0)
+  TP:    79.82 (n=44, missing=0)
+  Δ:      6.01
+
+vital_spo2_val_last                
+  FN:    95.48 (n=29, missing=0)
+  TP:    92.48 (n=44, missing=0)
+  Δ:      3.01
+
+lab_creatinine_val_max             
+  FN:     2.48 (n=29, missing=0)
+  TP:     2.33 (n=44, missing=0)
+  Δ:      0.15
+
+lab_creatinine_val_last            
+  FN:     1.75 (n=29, missing=0)
+  TP:     2.12 (n=44, missing=0)
+  Δ:     -0.37
+
+lab_lactate_val_max                
+  FN: 344829.18 (n=29, missing=0)
+  TP:     1.74 (n=44, missing=0)
+  Δ:  344827.44
+
+lab_lactate_val_last               
+  FN: 344828.86 (n=29, missing=0)
+  TP:     1.38 (n=44, missing=0)
+  Δ:  344827.47
+
+lab_platelets_val_min              
+  FN:   180.21 (n=29, missing=0)
+  TP:   209.41 (n=44, missing=0)
+  Δ:    -29.20
+
+lab_bilirubin_val_max              
+  FN:     1.45 (n=29, missing=0)
+  TP:     0.74 (n=44, missing=0)
+  Δ:      0.71
+
+lab_pao2_val_min                   
+  FN:    50.41 (n=29, missing=0)
+  TP:    62.61 (n=44, missing=0)
+  Δ:    -12.20
+
+anchor_age                         
+  FN:    66.59 (n=29, missing=0)
+  TP:    75.00 (n=44, missing=0)
+  Δ:     -8.41
+

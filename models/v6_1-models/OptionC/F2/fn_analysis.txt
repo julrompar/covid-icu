@@ -1,0 +1,78 @@
+======================================================================
+ANÁLISIS DE FALSOS NEGATIVOS
+======================================================================
+
+Total de muertes en test: 73
+Verdaderos Positivos (TP): 57
+Falsos Negativos (FN):     16
+Recall: 78.1% (57/73)
+
+----------------------------------------------------------------------
+Comparativa de variables entre FN y TP:
+----------------------------------------------------------------------
+
+sofa_partial                       
+  FN:     2.38 (n=16, missing=0)
+  TP:     5.46 (n=57, missing=0)
+  Δ:     -3.08
+
+apache2_partial                    
+  FN:    11.94 (n=16, missing=0)
+  TP:    18.65 (n=57, missing=0)
+  Δ:     -6.71
+
+severity_score                     
+  FN:     0.22 (n=16, missing=0)
+  TP:     0.30 (n=57, missing=0)
+  Δ:     -0.09
+
+vital_spo2_val_min                 
+  FN:    82.44 (n=16, missing=0)
+  TP:    80.93 (n=57, missing=0)
+  Δ:      1.51
+
+vital_spo2_val_last                
+  FN:    93.69 (n=16, missing=0)
+  TP:    92.33 (n=57, missing=0)
+  Δ:      1.35
+
+lab_creatinine_val_max             
+  FN:     1.57 (n=16, missing=0)
+  TP:     2.90 (n=57, missing=0)
+  Δ:     -1.33
+
+lab_creatinine_val_last            
+  FN:     1.31 (n=16, missing=0)
+  TP:     2.31 (n=57, missing=0)
+  Δ:     -1.00
+
+lab_lactate_val_max                
+  FN: 625001.53 (n=16, missing=0)
+  TP: 175440.58 (n=57, missing=0)
+  Δ:  449560.95
+
+lab_lactate_val_last               
+  FN:     1.61 (n=16, missing=0)
+  TP:     1.76 (n=57, missing=0)
+  Δ:     -0.14
+
+lab_platelets_val_min              
+  FN:   198.75 (n=16, missing=0)
+  TP:   204.68 (n=57, missing=0)
+  Δ:     -5.93
+
+lab_bilirubin_val_max              
+  FN:     0.60 (n=16, missing=0)
+  TP: 350877.94 (n=57, missing=0)
+  Δ:  -350877.34
+
+lab_pao2_val_min                   
+  FN:    59.38 (n=16, missing=0)
+  TP:    57.95 (n=57, missing=0)
+  Δ:      1.43
+
+anchor_age                         
+  FN:    60.38 (n=16, missing=0)
+  TP:    74.75 (n=57, missing=0)
+  Δ:    -14.38
+
